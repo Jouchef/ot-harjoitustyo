@@ -1,0 +1,115 @@
+commit d26881a6280d5c96c92ba7bddb6725bd236d56e1
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 15:26:29 2021 +0200
+
+    paljon muutoksia
+
+ tiedostoja/file1.txt                 | 1 -
+ tiedostoja/{file2.txt => file22.txt} | 0
+ 2 files changed, 1 deletion(-)
+
+commit 643cf0a773204173720a55f802ea31118d235067
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 15:23:42 2021 +0200
+
+    Poistettu väärät tied nimet ja luotu uudet
+
+ tiedostoja/file1.txt            | 1 +
+ tiedostoja/{file1 => file2.txt} | 0
+ tiedostoja/file3                | 0
+ tiedostoja/{file2 => file3.txt} | 0
+ 4 files changed, 1 insertion(+)
+
+commit 1a13630288acc29a653d84e1e7ddef5ca59bdecc
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 15:19:52 2021 +0200
+
+    lisätty tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6db59f53d9812c771b6ae117ae8588e59f5b4b67
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 15:14:54 2021 +0200
+
+    testiä ekaan ja kolmanteen
+
+ eka.txt    | 6 ++++--
+ kolmas.txt | 1 +
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+commit 84e687ff39f91b7e6cc153217627a6b856f76632
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 15:12:16 2021 +0200
+
+    uudelleennimeäminen
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 703a1bc41d78d926a9e308722534152e483305c6
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 15:10:55 2021 +0200
+
+    poistettu toinen
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f6f99ac06f671eee26a4a391eda9333084d85648
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 14:54:01 2021 +0200
+
+    tekstiä muutettu tiedosto.txt
+
+ tiedosto.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 47d655b0ce14b3b411c0e05d62ff2a1e9c63a1ef
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 14:52:19 2021 +0200
+
+    tekstiä tiedosto.txt
+
+ tiedosto.txt | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+
+commit 4d9329a9a01fb2a006660d8a792847732a8f12ab
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 14:44:31 2021 +0200
+
+    Lisätty stuff
+
+ stuff/stuffia.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9653b9d899f785ee9c5cd15073405f3fd1ba2de1
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 14:43:11 2021 +0200
+
+    kolmas.txt lisätty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 3182cd64cb86b424b22b37d6cf31518d036d7c27
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 14:41:34 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 1099dce59a84d2e857ebb2ea4d6958c376df4b6e
+Author: Joosef Abokther <49030615+Jouchef@users.noreply.github.com>
+Date:   Tue Mar 16 14:39:55 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
