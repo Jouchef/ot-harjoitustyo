@@ -6,3 +6,5 @@ Toteutetaan **tavaroiden seurantaan tarkoitettu sovellus.** _Yhdistyksen tavara 
 [Linkki laskarit kansioon](https://github.com/Jouchef/ot-harjoitustyo/tree/b779ba4e1fe9fb92ff8840568eb47f8c323d83db/laskarit)
 
 [Linkki vaatimusmäärittelyyn](https://github.com/Jouchef/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
+
+[Linkki tuntikirjanpitoon](https://github.com/Jouchef/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
