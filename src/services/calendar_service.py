@@ -14,7 +14,7 @@ class CalendarService:
 
         self.ensure_positive_amount(amount)
         self.ensure_sufficient_calendars(fromWhere, amount)
-        
+
         fromWhere.take_calendars(amount)
         toTarget.add_calendars(amount)
 
@@ -25,5 +25,5 @@ class CalendarService:
     def remove_calendars_from_group(self, group, amount):
         self.ensure_positive_amount(amount)
         self.ensure_sufficient_calendars(group, amount)
-        
+
         group.take_calendars(amount)

@@ -1,5 +1,6 @@
 from entities.group import Group
 
+
 class GroupService:
     def __init__(self):
         self._groups = []

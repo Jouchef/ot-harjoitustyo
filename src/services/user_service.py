@@ -1,6 +1,7 @@
 from entities.user import User
 from services.group_service import GroupService
 
+
 class UserService:
     def __init__(self, group_service: GroupService):
         self._users = []
@@ -11,7 +12,8 @@ class UserService:
         self._users.append(user)
 
         if group_name:
-            group = next((g for g in self._group_service.list_groups() if g.name == group_name), None)
+            group = next(
+                (g for g in self._group_service.list_groups() if g.name == group_name), None)
             if group:
                 group.add_participant(user)
 
@@ -26,6 +28,6 @@ class UserService:
 
     def list_users(self):
         return self._users
-    
+
     def list_users_by_group(self, group_name):
         return [user for user in self._users if user.group == group_name]

@@ -11,7 +11,8 @@ class TestUserService(unittest.TestCase):
 
     def test_user_can_be_added_to_users(self):
         self.user_service.add_user("user", "role", "group")
-        self.assertEqual(self.user_service.list_users()[0], User("user", "role", "group"))
+        self.assertEqual(self.user_service.list_users()[
+                         0], User("user", "role", "group"))
 
     def test_user_can_be_removed_from_users(self):
         self.user_service.add_user("test", "test", "test")
@@ -27,4 +28,5 @@ class TestUserService(unittest.TestCase):
         self.user_service.add_user("test", "test", "test")
         self.user_service.add_user("test2", "test2", "test")
         self.assertEqual(len(self.user_service.list_users_by_group("test")), 2)
-        self.assertEqual(len(self.user_service.list_users_by_group("test2")), 0)
+        self.assertEqual(
+            len(self.user_service.list_users_by_group("test2")), 0)

@@ -1,8 +1,8 @@
 class User:
     def __init__(self, username, role, group):
-        self._username= username
-        self._role =role
-        self._group= group
+        self._username = username
+        self._role = role
+        self._group = group
         self._calendars = 0
 
     @property
@@ -16,7 +16,7 @@ class User:
     @property
     def group(self):
         return self._group
-    
+
     @property
     def calendars(self):
         return self._calendars

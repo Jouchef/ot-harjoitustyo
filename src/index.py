@@ -3,7 +3,6 @@ from tkinter import Tk
 from ui.ui import UI
 
 
-
 def main():
     print("mainissa")
     window = Tk()
