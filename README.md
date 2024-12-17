@@ -18,3 +18,9 @@ Testiorganisaatio: **Rastipartio**
 ```poetry install```
 
 
+
+
+## Devaajan ohjeet
+- [tasks.py] (https://github.com/Jouchef/ot-harjoitustyo/blob/main/tasks.py) - tiedosto sisältää tehdyt oikotiet.
+  - Näitä voi käyttää käskyllä ```poetry run invoke KÄSKY```
+- 
