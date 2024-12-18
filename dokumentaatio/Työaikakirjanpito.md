@@ -4,6 +4,7 @@
 19.11.2024 - 3h Testien kirjoittamista user_service -luokalle, sekä ominaisuuksien korjailua.
 26.11.2024 - 3h Aiheen opiskelu ja mieleen palauttelu + tehtävien tekemistä.15h
 30.11.2024 - 2h Rakenteen tekemistä
+17.12.2024 - 2h Tietokannan suunnittelu ja rakentaminen
 
 
-Tuntien summa: 15h
+Tuntien summa: 17h

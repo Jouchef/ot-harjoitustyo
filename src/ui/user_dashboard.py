@@ -1,6 +1,6 @@
 from tkinter import Frame, Radiobutton, ttk, StringVar, Listbox
-from services.user_service import UserService
-from services.group_service import GroupService
+from reposetory.user_reposetory import UserService
+from reposetory.group_reposetory import GroupService
 
 
 class UserDashboard:

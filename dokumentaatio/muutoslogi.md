@@ -13,3 +13,7 @@
 - Lisätty pylint
 - korjattu Readme
 - Tämän viikon osalta vajaa työskentely
+
+
+## Viikko 7
+- Lisätty SQlite tietokanta

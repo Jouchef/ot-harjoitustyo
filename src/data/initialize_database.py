@@ -1,10 +1,10 @@
-from database_connection import get_database_connection
+from data.database_connection import get_database_connection
 
 
 def drop_tables(connection):
     cursor = connection.cursor()
 
-    #Mahdollistaa taulujen poiston missä vaan järjestyksessä
+    # Mahdollistaa taulujen poiston missä vaan järjestyksessä
     cursor.execute('''
                    PRAGMA foreign_keys = OFF;
                    ''')
@@ -22,70 +22,98 @@ def drop_tables(connection):
     for table in tables:
         cursor.execute(f"DROP TABLE IF EXISTS {table};")
 
-    #Viittaukset takaisin päälle
+    # Viittaukset takaisin päälle
     cursor.execute('''
                    PRAGMA foreign_keys = ON;
                    ''')
 
-    connection.commit()
+    print("Taulut poistettu")
 
+    connection.commit()
 
 
 def create_tables(connection):
     cursor = connection.cursor()
 
     cursor.execute('''
-        create table users (
-            username text primary key,
-            password text
+        CREATE TABLE users (
+            username TEXT PRIMARY KEY,
+            password TEXT
         );
-        
-        create table user_calendars (
-            id integer primary key autoincrement,
-            username text,
-            amount integer,
-            date text,
-            foreign key (username) references users(username)
-        );
-                   
-        create table user_money (
-            id integer primary key autoincrement,
-            username text,
-            amount integer,
-            date text,
-            foreign key (username) references users(username)
-          );
-                   
-        create table groups (
-            name text primary key
-        );
-                   
-        create table group_leaders (
-            group_name text,
-            username text,
-            primary key (group_name, username),
-            foreign key (group_name) references groups(name),
-            foreign key (username) references users(username)
-        );
-        
-        create table group_participants (
-            group_name text,
-            username text,
-            primary key (group_name, username),
-            foreign key (group_name) references groups(name),
-            foreign key (username) references users(username)
-        );
-        
-        create table group_calendars (
-            id integer primary key autoincrement,
-            group_name text,
-            amount integer,
-            date text,
-            foreign key (group_name) references groups(name)
-        );
-        
-            
     ''')
+
+    cursor.execute('''
+        CREATE TABLE user_calendars (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT,
+            amount INTEGER,
+            date TEXT,
+            FOREIGN KEY (username) REFERENCES users(username)
+        );
+    ''')
+
+    cursor.execute('''
+        CREATE TABLE user_money (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT,
+            amount INTEGER,
+            date TEXT,
+            FOREIGN KEY (username) REFERENCES users(username)
+        );
+    ''')
+
+    cursor.execute('''
+        CREATE TABLE groups (
+            name TEXT PRIMARY KEY
+        );
+    ''')
+
+    cursor.execute('''
+        CREATE TABLE group_leaders (
+            group_name TEXT,
+            username TEXT,
+            PRIMARY KEY (group_name, username),
+            FOREIGN KEY (group_name) REFERENCES groups(name),
+            FOREIGN KEY (username) REFERENCES users(username)
+        );
+    ''')
+
+    cursor.execute('''
+        CREATE TABLE group_participants (
+            group_name TEXT,
+            username TEXT,
+            PRIMARY KEY (group_name, username),
+            FOREIGN KEY (group_name) REFERENCES groups(name),
+            FOREIGN KEY (username) REFERENCES users(username)
+        );
+    ''')
+
+    cursor.execute('''
+        CREATE TABLE group_calendars (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            group_name TEXT,
+            amount INTEGER,
+            date TEXT,
+            FOREIGN KEY (group_name) REFERENCES groups(name)
+        );
+    ''')
+
+    print("Taulut luotu")
+
+    connection.commit()
+
+
+def fill_users_table(connection):
+    cursor = connection.cursor()
+
+    cursor.execute('''
+        INSERT INTO users (username, password) VALUES
+        ('testi1', 'password1'),
+        ('testi2', 'password2'),
+        ('testi3', 'password3');
+    ''')
+
+    print("Testi käyttäjät lisätty users-tauluun")
 
     connection.commit()
 
@@ -99,4 +127,3 @@ def initialize_database():
 
 if __name__ == "__main__":
     initialize_database()
-    
