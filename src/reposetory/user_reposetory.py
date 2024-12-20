@@ -1,4 +1,5 @@
 from entities.user import User
+from data.database_connection import get_database_connection
 
 
 class UserReposetory:
@@ -48,6 +49,14 @@ class UserReposetory:
             cursor.close()
 
     def get_user(self, username):
+        """Hakee käyttäjän käyttäjätunnuksen perusteella.
+        
+        Args:
+            username: Merkkijono, käyttäjätunnus
+
+        Returns:
+            User: Käyttäjä-olio, jos käyttäjä löytyy, muuten None
+        """
         try:
             cursor = self.connection.cursor()
             cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
@@ -94,3 +103,5 @@ class UserReposetory:
             return 0
         finally:
             cursor.close()
+
+user_reposetory = UserReposetory(get_database_connection())

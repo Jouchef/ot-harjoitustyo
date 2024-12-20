@@ -4,7 +4,6 @@ from ui.ui import UI
 
 
 def main():
-    print("mainissa")
     window = Tk()
     window.title("Adventtikalenteriwelho")
 
